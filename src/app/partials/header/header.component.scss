@@ -1,0 +1,90 @@
+@import "../../../assets/styles/colorVariable.scss";
+
+.logo {
+  color: $white;
+  font-family: Lato;
+  text-decoration: none;
+  width: 100px;
+  height: 73px;
+  text-align: right;
+  position: relative;
+  top: 1em;
+  text-transform: capitalize;
+  letter-spacing: 0.75px;
+  font-size: 24px;
+}
+
+main {
+  flex: 1;
+}
+
+mat-card {
+  margin-bottom: 4px;
+}
+header {
+  position: fixed;
+  height: 11em;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+mat-toolbar {
+  overflow: hidden;
+  width: 100%;
+  min-width: 475px;
+  padding: 10px 20px 10px 10px;
+  font-size: 20px;
+  position: relative;
+  color: $white;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  height: 5em;
+  background: $blue 0% 0% no-repeat padding-box;
+  border: 1px solid $gray;
+  opacity: 1;
+}
+.loginSection {
+  z-index: 3;
+  position: relative;
+  widows: 100%;
+  .header-nav {
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    height: 32px;
+    text-align: left;
+    color: $white;
+    min-width: 3em;
+    padding-right: 1.5em;
+    top: 1.5em;
+    position: relative;
+    letter-spacing: 0.72px;
+    opacity: 1;
+    justify-content: center;
+    &.teacher-login {
+      color: $blue;
+      background-color: $white;
+      width: 11em;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+  }
+}
+.loginSection::after {
+  z-index: 3;
+  position: relative;
+  widows: 100%;
+}
+
+mat-icon {
+  position: relative;
+  top: 1.3em;
+  &.icon-expand {
+    right: 0.8em;
+  }
+  cursor: pointer;
+}

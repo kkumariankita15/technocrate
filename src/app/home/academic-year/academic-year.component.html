@@ -1,0 +1,207 @@
+<div class="main-container">
+  <div
+    class="container"
+    fxLayout
+    fxLayout.xs="row"
+    fxLayoutAlign="center"
+    fxLayoutGap="10px"
+    fxLayoutGap.xs="0"
+  >
+    <div class="item item-2" fxFlex="100">
+      <mat-card class="header-card mat-elevation-z5" fxFlex="100">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <img src="assets/images/profile.png" />
+          </div>
+          <mat-card-title>
+            <span class="profile-header">Hello, Vincent Williams</span>
+          </mat-card-title>
+          <mat-card-subtitle>
+            <p class="profile-title">Profile Info</p></mat-card-subtitle
+          >
+          <div
+            fxFlexOffset="0px"
+            fxFlex="80%"
+            fxLayout.xs="row"
+            fxLayoutAlign="center"
+          >
+            <button class="add-btn-header">
+              <mat-icon>add</mat-icon>
+              Add
+            </button>
+          </div>
+          <div
+            fxLayout.md="column"
+            fxFlex="20%"
+            class="above-progress"
+            fxLayoutAlign="right"
+          >
+            Total Score: <span class="above-progress-score"> 187</span>
+          </div>
+          <div
+            fxFlex="15%"
+            fxLayout.xs="column"
+            fxLayoutAlign="left"
+            class="hedaer-card"
+          >
+            <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+          </div>
+          <div
+            fxFlexOffset="0px"
+            fxFlex="10%"
+            fxLayout.xs="row"
+            fxLayoutAlign="right"
+            class="last-section"
+          >
+            <span class="last-section-note">Add Note</span>
+
+            <!-- <div class="last-section-sub-note">500</div> -->
+          </div>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+  <ng-container *ngFor="let data of mainContainer">
+    <div class="container">
+      <p
+        fxLayout
+        fxLayout.xs="row"
+        fxLayoutAlign="left"
+        fxLayoutGap="10px"
+        fxLayoutGap.xs="0"
+        fxFlex="100"
+      >
+        <span class="year-section">{{ data?.year }}</span>
+        <span class="action-section">
+          <mat-icon class="edit">edit</mat-icon>
+          <span class="action-text-edit">edit</span>
+          <mat-icon class="delete">delete</mat-icon>
+          <span class="action-text-delete">delete</span>
+        </span>
+      </p>
+    </div>
+    <div
+      class="container"
+      fxLayout
+      fxLayout.xs="row"
+      fxLayoutAlign="center"
+      fxLayoutGap="10px"
+      fxLayoutGap.xs="0"
+    >
+      <mat-card class="example-card mat-elevation-z5" fxFlex="100">
+        <mat-card-title class="card-body-title"
+          >Roster
+          <mat-card-subtitle class="card-body-subtitle"
+            >— Add Roster or Tap on Roster to add notes</mat-card-subtitle
+          >
+          <button class="add-btn-header coard-body-btn">
+            View All
+          </button>
+        </mat-card-title>
+
+        <div
+          class="container"
+          fxLayout
+          fxLayout.xs="column"
+          fxLayoutAlign="center"
+          fxLayoutGap="10px"
+          fxLayoutGap.xs="0"
+        >
+          <div
+            class="add-icon-part add-icon-part-short"
+            fxFlex="4%"
+            fxLayoutAlign="left"
+          >
+            <mat-icon>add</mat-icon>
+          </div>
+          <ng-container *ngFor="let roster_data of data?.roster">
+            <div class="item item-2" fxFlex="18%">
+              <mat-card>
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image">
+                    <img [src]="roster_data.images" />
+                  </div>
+                  <mat-card-title class="title-card">{{
+                    roster_data?.name
+                  }}</mat-card-title>
+                  <mat-card-subtitle
+                    ><span class="subtitle-1">Create Note</span>
+                    <span class="subtitle-1 subtitle-1-2"
+                      >View Notes</span
+                    ></mat-card-subtitle
+                  >
+                </mat-card-header>
+              </mat-card>
+            </div>
+          </ng-container>
+        </div>
+        <mat-card-title class="card-body-title class"
+          >Classes
+
+          <button
+            class="add-btn-header coard-body-btn add-btn-header coard-body-btn-class-section"
+          >
+            View All
+          </button>
+        </mat-card-title>
+        <div
+          class="container"
+          fxLayout
+          fxLayout.xs="column"
+          fxLayoutAlign="center"
+          fxLayoutGap="15px"
+          fxLayoutGap.xs="0"
+          class="class-add outer"
+        >
+          <div class="add-icon-part" fxFlex="5%">
+            <mat-icon>add</mat-icon>
+          </div>
+
+          <ng-container *ngFor="let class_data of data?.classes">
+            <div class="item item-2" fxFlex="30%">
+              <mat-card class="child-1">
+                <mat-card-header class="hedaer-for-line">
+                  <mat-card-title class="title-card title-card-class"
+                    >{{ class_data?.subjects }}
+                    <mat-card-subtitle class="float-right fit-content"
+                      >{{ class_data?.score }} |
+                      {{ class_data?.grade }}</mat-card-subtitle
+                    ></mat-card-title
+                  >
+                  <mat-card-subtitle
+                    >Total Rosters: {{ class_data?.total }}</mat-card-subtitle
+                  >
+                </mat-card-header>
+                <ng-container
+                  *ngFor="let card of class_data?.details; let i = index"
+                >
+                  <div class="child-card">
+                    <mat-card class="child-{{ i + 1 }}">
+                      <span>{{ card?.value }}</span>
+                      <mat-icon class="card-icon">chevron_right</mat-icon>
+                      <p>{{ card?.topic }}</p>
+                    </mat-card>
+                  </div>
+                </ng-container>
+                <!-- <div class="child-card">
+                  <mat-card class="child-2">
+                    <span>150</span>
+                    <mat-icon class="card-icon">chevron_right</mat-icon>
+                    <p>Notes</p></mat-card
+                  >
+                </div>
+                <div class="child-card">
+                  <mat-card class="child-3">
+                    <span>150</span>
+                    <mat-icon class="card-icon">chevron_right</mat-icon>
+                    <p>Notes</p></mat-card
+                  >
+                </div> -->
+              </mat-card>
+            </div>
+          </ng-container>
+        </div>
+      </mat-card>
+    </div>
+  </ng-container>
+</div>

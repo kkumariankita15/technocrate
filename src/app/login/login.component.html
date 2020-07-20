@@ -1,0 +1,54 @@
+<div class="login-container">
+  <!-- <div fxLayout="row">
+     <div fxFlex="20" class="action-blurb"></div> 
+    <div fxFlex="100"> -->
+  <span class="login-container-heading">Teacher Login</span>
+  <p class="login-container-sub-heading">
+    Please sign in with your email address.
+  </p>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <p>
+      <mat-form-field>
+        <input
+          type="text"
+          matInput
+          placeholder="Email Address"
+          formControlName="email"
+        />
+        <mat-error>
+          Email is required
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field>
+        <input
+          type="password"
+          matInput
+          placeholder="Password"
+          formControlName="password"
+        />
+        <mat-error>
+          Password is required
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+    <div class="button-div">
+      <a class="button-div-forgot" href="javascript:void(0)"
+        >Forgot Password?</a
+      >
+      <button type="submit" mat-button class="button-div-login-">Login</button>
+    </div>
+    <div class="sign-up">
+      <span class="sign-up-message"
+        >Don't have an account?
+        <a href="javascript:void(0)" class="sign-up-message-link">Sign Up</a>
+      </span>
+    </div>
+  </form>
+</div>
+<!-- <div fxFlex="20" class="action-blurb"></div> -->
+<!-- </div>
+</div> -->

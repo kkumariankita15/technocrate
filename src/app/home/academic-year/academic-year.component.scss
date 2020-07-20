@@ -1,0 +1,229 @@
+@import "../../../assets/styles/colorVariable.scss";
+
+.example-card {
+  //   margin-top: 3em;
+}
+button {
+  &.add-btn-header {
+    width: 9em;
+    height: 2.5em;
+    border: 1px solid #386cb5;
+    border-radius: 3em;
+    color: $white;
+    position: relative;
+    top: 1em;
+    background: transparent linear-gradient(270deg, #386cb5 0%, #669fed 100%) 0%
+      0% no-repeat padding-box;
+    mat-icon {
+      position: relative;
+      top: 0.2em;
+    }
+  }
+}
+::ng-deep .hedaer-card .mat-progress-bar-fill::after {
+  background-color: $red-1;
+}
+
+::ng-deep .hedaer-card .mat-progress-bar {
+  height: 0.35em;
+  border-radius: 13em;
+}
+.hedaer-card {
+  position: relative;
+  top: 2.5em;
+  right: 5em;
+}
+.above-progress {
+  position: relative;
+  top: 1em;
+  left: 9em;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  &-score {
+    color: $yellow-1;
+  }
+}
+mat-card-title.mat-card-title {
+  width: 12em;
+}
+
+.profile-header,
+.profile-title {
+  margin-left: 4px;
+}
+
+.main-container {
+  max-width: 100vw;
+  overflow: hidden;
+  margin-top: 6em;
+}
+
+span.last-section-note {
+  color: $blue-3;
+  font-size: 14px;
+  word-break: normal;
+  break-after: auto;
+}
+.action-section {
+  float: right;
+  position: relative;
+  left: 53em;
+  top: 0.5em;
+  mat-icon {
+    font-size: 21px;
+    &.edit {
+      color: $blue;
+    }
+    &.delete {
+      color: $red;
+    }
+  }
+}
+.year-section {
+  position: relative;
+  top: 0.5em;
+  font-size: 17px;
+  font-weight: 600;
+}
+span.action-text {
+  position: relative;
+  top: -6px;
+
+  &-edit {
+    color: $blue;
+    position: relative;
+    top: -4px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &-delete {
+    color: $red;
+    position: relative;
+    top: -4px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.mat-card-title {
+  &.mat-card-title.card-body-title {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    width: 100vw;
+    .mat-card-subtitle {
+      display: initial;
+    }
+  }
+  &.title-card {
+    font-size: 14px;
+    font-weight: 600;
+    &-class {
+      width: 45vh;
+    }
+  }
+}
+.coard-body-btn {
+  height: 20px !important;
+  width: 59px !important;
+  font-size: 12px;
+  position: relative !important;
+  top: 0 !important;
+  left: 58em;
+  &-class-section {
+    left: 80em;
+  }
+}
+.class {
+  margin-top: 4px !important;
+}
+.add-icon-part {
+  border: 1px dashed $blue;
+  height: 11.8em;
+  border-radius: 10px;
+  mat-icon {
+    position: relative;
+    justify-content: center;
+    top: 3em;
+    left: 0.5em;
+    right: 0.5em;
+    color: $blue;
+  }
+  &-short {
+    height: 40px;
+    border-radius: 40em;
+    position: relative;
+    top: 1.4em;
+    right: 1em;
+    mat-icon {
+      position: relative;
+      justify-content: center;
+      top: 0.3em;
+      left: 7px;
+      right: 1px;
+      color: $blue;
+    }
+  }
+}
+
+.subtitle-1 {
+  font-size: 10px;
+  color: blue;
+  position: relative;
+  top: 1em;
+  float: left;
+  &-2 {
+    object-fit: contain;
+    word-spacing: normal;
+    margin-left: 8px;
+  }
+}
+.float-right {
+  float: right;
+}
+
+.hedaer-for-line {
+  border-bottom: 1px solid $gray-2;
+}
+.child-card {
+  display: inline-block;
+  width: 6em;
+  padding: 0.3em;
+  &:not(:last-child) {
+    border-right: 1px solid $gray-2;
+  }
+  margin-top: 10px;
+  mat-card.child-1 {
+    background: transparent linear-gradient(270deg, #747beb 0%, #989eff 100%) 0%
+      0% no-repeat padding-box;
+  }
+  mat-card.child-2 {
+    background: transparent linear-gradient(270deg, #ffb239 0%, #ffc76e 100%) 0%
+      0% no-repeat padding-box;
+  }
+  mat-card.child-3 {
+    background: transparent linear-gradient(270deg, #08b596 0%, #27d3b4 100%) 0%
+      0% no-repeat padding-box;
+  }
+  span {
+    font-size: 12px;
+    color: $white;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  p {
+    font-size: 10px;
+    color: $white;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}
+.fit-content {
+  position: relative;
+}
+.card-icon {
+  float: right;
+  position: relative;
+  left: 0.5em;
+  top: 0.4em;
+  color: $white;
+}

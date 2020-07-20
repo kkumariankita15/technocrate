@@ -1,0 +1,5 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+<ng-container *ngIf="router && router.url && router.url.toLowerCase() === '/'">
+  <app-footer></app-footer>
+</ng-container>
